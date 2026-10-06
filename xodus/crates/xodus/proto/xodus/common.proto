@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package xodus;
+
+enum XodusMessageType {
+    UNKNOWN = 0;
+    PING = 1;
+    PONG = 2;
+    MSA_TOKEN_REQUEST=3;
+    MSA_TOKEN_RESPONSE=4;
+    // An XSTS token for a specific relying party, minted from a SISU
+    // bundle so it carries the TITLE claim. The title claim is what
+    // gameservices.fm.forzamotorsport.net requires; without it the Logon
+    // is refused with a blank 403.
+    XSTS_TOKEN_REQUEST=5;
+    XSTS_TOKEN_RESPONSE=6;
+    // The proof key this service mints with. A token is bound to the key
+    // advertised when it was minted, and only the holder of that key can
+    // sign requests carrying it - so a caller that mints here but signs
+    // for itself has to be given the same key. The service owns it because
+    // it mints its device credentials at startup, before any caller has
+    // connected.
+    PROOF_KEY_REQUEST=7;
+    PROOF_KEY_RESPONSE=8;
+}
