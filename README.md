@@ -1,7 +1,7 @@
 # Forza Motorsport on Linux using `GE-Proton11-3-FM` and `xodus`
 
 > [!IMPORTANT]
-> Please make a backup of this repo or archive it so it doesn't become lost history (again)
+> **Please make a backup of this repo or fork it so it doesn't become lost history (again)**
 
 ## Dependencies
 - `kwallet`, with the desktop environment preferably KDE Plasma. The wallet should be open while xodus is running.
